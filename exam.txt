@@ -1,0 +1,394 @@
+main act xml-
+<ListView
+        android:id="@+id/emplist"
+        android:layout_width="352dp"
+        android:layout_height="606dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+insert xml-
+<TextView
+        android:id="@+id/activitytitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="120dp"
+        android:text="Insert Employee"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/employeename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Employee Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activitytitle" />
+
+    <AutoCompleteTextView
+        android:id="@+id/employeedesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="155dp"
+        android:hint="Designation"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeename" />
+
+    <EditText
+        android:id="@+id/employeephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="98dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeedesignation" />
+
+    <EditText
+        android:id="@+id/employeeemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeephone" />
+
+    <Button
+        android:id="@+id/insertdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="162dp"
+        android:text="Insert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeeemail" />
+
+search
+<AutoCompleteTextView
+        android:id="@+id/employeesearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:hint="Search Employee"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="17dp"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/employeeid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="167dp"
+        android:text="Employee ID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/empname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="155dp"
+        android:text="Employee Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/employeeid" />
+
+    <TextView
+        android:id="@+id/empdesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="169dp"
+        android:text="Designation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empname" />
+
+    <TextView
+        android:id="@+id/empphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="159dp"
+        android:text="Phone Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empdesignation" />
+
+    <TextView
+        android:id="@+id/empemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="159dp"
+        android:text="Email Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empphone" />
+
+main Act:-
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+
+    ListView employeelist;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        employeelist=findViewById(R.id.emplist);
+
+        employeedb employeenames = new employeedb(MainActivity.this,"employee",null,1);
+
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,employeenames.displaynames());
+
+        employeelist.setAdapter(adp);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.m1:
+                Intent i1 = new Intent(MainActivity.this,insertemp.class);
+                startActivity(i1);
+                break;
+
+            case R.id.m2:
+                Intent i2 = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(i2);
+                break;
+
+            case R.id.m3:
+                Intent i3 = new Intent(MainActivity.this,searchemployee.class);
+                startActivity(i3);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+insert
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class insertemp extends AppCompatActivity {
+
+    TextView ename, phoneno, email;
+    AutoCompleteTextView designation;
+    Button inserbtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_insertemp);
+        ename=findViewById(R.id.employeename);
+        phoneno=findViewById(R.id.employeephone);
+        email=findViewById(R.id.employeeemail);
+        designation=findViewById(R.id.employeedesignation);
+        inserbtn=findViewById(R.id.insertdata);
+
+        String[] designations = {"Clerk","Executive","Manager"};
+
+        ArrayAdapter adp = new ArrayAdapter(insertemp.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,designations);
+
+        designation.setAdapter(adp);
+        designation.setThreshold(1);
+
+        employeedb employeedatabase = new employeedb(insertemp.this,"employee",null,1);
+
+        inserbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String employeephone = phoneno.getText().toString();
+                Integer phoneno = Integer.parseInt(employeephone);
+                employeedatabase.addData(ename.getText().toString(),designation.getText().toString(),phoneno,email.getText().toString());
+                Intent i = new Intent(insertemp.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+    }
+search
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class searchemployee extends AppCompatActivity {
+
+    AutoCompleteTextView empsearch;
+    TextView empid, empname, empdesignation, phoneno, empemail;
+    Button searchbtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_searchemployee);
+        empsearch=findViewById(R.id.employeesearch);
+        searchbtn=findViewById(R.id.searchbtn);
+        empid=findViewById(R.id.employeeid);
+        empname=findViewById(R.id.empname);
+        empdesignation=findViewById(R.id.empdesignation);
+        phoneno=findViewById(R.id.empphone);
+        empemail=findViewById(R.id.empemail);
+
+        employeedb empdata = new employeedb(searchemployee.this,"employee",null,1);
+
+        ArrayAdapter adp = new ArrayAdapter(searchemployee.this,androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                empdata.displaynames());
+
+        empsearch.setAdapter(adp);
+        empsearch.setThreshold(1);
+
+        searchbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor result = empdata.findbyname(empsearch.getText().toString());
+                result.moveToNext();
+                empid.setText(result.getString(0));
+                empname.setText(result.getString(1));
+                empdesignation.setText(result.getString(2));
+                phoneno.setText(result.getString(3));
+                empemail.setText(result.getString(4));
+            }
+        });
+
+
+    }
+EmployeeDB-
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class employeedb extends SQLiteOpenHelper {
+    public employeedb(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, "employee", factory, 1);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("create table emp (eid integer primary key autoincrement,ename text, designation text, phoneno integer, email text)");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        sqLiteDatabase.execSQL("drop table if exists emp");
+        onCreate(sqLiteDatabase);
+    }
+
+    public void addData(String name,String designation, int phoneno, String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("ename",name);
+        cv.put("designation",designation);
+        cv.put("phoneno",phoneno);
+        cv.put("email",email);
+        db.insert("emp",null,cv);
+        db.close();
+    }
+
+    public List<String> displaynames(){
+        List<String> namelist = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor result = db.rawQuery("select ename from emp",null);
+        while(result.moveToNext()){
+            namelist.add(result.getString(0));
+        }
+        return namelist;
+    }
+
+    public Cursor findbyname(String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor result = db.rawQuery("select * from emp where ename=?",new String[]{name});
+        return result;
+
+    }
+}
+
