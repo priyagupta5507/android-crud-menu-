@@ -1,4 +1,5 @@
-main act xml-
+-----Android Menu-----------------------------------------------------------------------
+--main act xml--
 <ListView
         android:id="@+id/emplist"
         android:layout_width="352dp"
@@ -12,7 +13,7 @@ main act xml-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-insert xml-
+--insert xml--
 <TextView
         android:id="@+id/activitytitle"
         android:layout_width="wrap_content"
@@ -96,7 +97,7 @@ insert xml-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/employeeemail" />
 
-search
+--search--
 <AutoCompleteTextView
         android:id="@+id/employeesearch"
         android:layout_width="wrap_content"
@@ -180,7 +181,7 @@ search
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/empphone" />
 
-main Act:-
+--main Act:--
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -237,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-insert
+--insert--
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -285,7 +286,7 @@ public class insertemp extends AppCompatActivity {
         });
 
     }
-search
+--search--
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -335,7 +336,7 @@ public class searchemployee extends AppCompatActivity {
 
 
     }
-EmployeeDB-
+--EmployeeDB--
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -393,7 +394,7 @@ public class employeedb extends SQLiteOpenHelper {
 }
 
 
-mymenu.xml
+--mymenu.xml--
 
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
@@ -403,3 +404,1040 @@ mymenu.xml
 </menu>
 
 
+---Registration form-----
+--Main xml--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20px"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration Form"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/nameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/ageTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/addressTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/cityTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/phoneTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_gravity="center"
+        android:layout_marginTop="30px"/>
+
+
+</LinearLayout>
+
+
+---display details-----
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30px">
+    tools:context=".displaydetails">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Details"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginBottom="30px"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name : "
+            android:ems="4"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/dnameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age : "
+            android:ems="4"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/dageTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address : "
+            android:textStyle="bold"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/daddressTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City : "
+            android:textStyle="bold"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/dcityTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone : "
+            android:textStyle="bold"
+            android:ems="4"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/dphoneTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+----Main Activity.java----
+public class MainActivity extends AppCompatActivity {
+    EditText nameTxt,ageTxt,addressTxt,cityTxt,phoneTxt;
+    Button saveBtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        nameTxt = (EditText) findViewById(R.id.nameTxt);
+        ageTxt = (EditText) findViewById(R.id.ageTxt);
+        addressTxt = (EditText) findViewById(R.id.addressTxt);
+        cityTxt = (EditText) findViewById(R.id.cityTxt);
+        phoneTxt = (EditText) findViewById(R.id.phoneTxt);
+        saveBtn = (Button) findViewById(R.id.saveBtn);
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                String username = nameTxt.getText().toString();
+                String userage = ageTxt.getText().toString();
+                String useraddress = addressTxt.getText().toString();
+                String usercity = cityTxt.getText().toString();
+                String userphone = phoneTxt.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this,
+                        displaydetails.class);
+                intent.putExtra("username",username);
+                intent.putExtra("userage",userage);
+                intent.putExtra("useraddress",useraddress);
+                intent.putExtra("usercity",usercity);
+                intent.putExtra("userphone",userphone);
+                startActivity(intent);
+            }
+        });
+
+    }
+}
+
+--for display details.java----
+public class displaydetails extends AppCompatActivity {
+    TextView dnameTxt,dageTxt,daddressTxt,dcityTxt,dphoneTxt;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_displaydetails);
+        dnameTxt = (TextView) findViewById(R.id.dnameTxt);
+        dageTxt = (TextView) findViewById(R.id.dageTxt);
+        daddressTxt = (TextView)
+                findViewById(R.id.daddressTxt);
+        dcityTxt = (TextView) findViewById(R.id.dcityTxt);
+        dphoneTxt = (TextView) findViewById(R.id.dphoneTxt);
+        String username =
+                getIntent().getStringExtra("username");
+        String userage = getIntent().getStringExtra("userage");
+        String useraddress =
+                getIntent().getStringExtra("useraddress");
+        String usercity = getIntent().getStringExtra("usercity");
+        String userphone =
+                getIntent().getStringExtra("userphone");
+        dnameTxt.setText(username);
+        dageTxt.setText(userage);
+        daddressTxt.setText(useraddress);
+        dcityTxt.setText(usercity);
+        dphoneTxt.setText(userphone);
+    }
+}
+
+
+----shilpa's crud code---------------------------------------------------------------------------------------------
+public class DbHelper extends SQLiteOpenHelper {
+
+
+
+    public DbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, "StudentDB", null, 1);
+
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+
+        sqLiteDatabase.execSQL("create table student (Id integer primary key autoincrement , Sname text , Lname text , Marks integer)");
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+        sqLiteDatabase.execSQL("drop table if exists student");
+        onCreate(sqLiteDatabase);
+
+    }
+
+    public boolean insertData(String Sname,String Lname,String Marks)
+    {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Sname",Sname);
+        contentValues.put("Lname",Lname);
+        contentValues.put("Marks",Marks);
+        Long result = sqLiteDatabase.insert("student",null,contentValues);
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getAllData(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor res = sqLiteDatabase.rawQuery("select * from student",null);
+        return res;
+    }
+
+    public boolean updateData(String Id ,String Sname,String Lname,String Marks){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Id",Id);
+        contentValues.put("Sname",Sname);
+        contentValues.put("Lname",Lname);
+        contentValues.put("Marks",Marks);
+        sqLiteDatabase.update("student",contentValues,"Id = ?",new String[] { Id });
+        return true;
+    }
+
+    public  Integer deleteData(String Id){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        return sqLiteDatabase.delete("student","Id = ?",new String[] { Id });
+    }
+
+}
+
+
+-----develop an application to show items inlist view and run on selection of particular item it should start with respective activity------------------------------->
+--main Xml--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4" />
+
+</RelativeLayout>
+
+----main activity----
+public class MainActivity extends AppCompatActivity {
+    ListView listView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        listView = (ListView) findViewById(R.id.listView);
+        List<String> list = new ArrayList<>();
+        list.add("Activity 1");
+        list.add("Activity 2");
+        list.add("Activity 3");
+        ArrayAdapter arrayAdapter = new
+                ArrayAdapter(getApplicationContext(),
+                android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(i == 0)
+                {
+                    startActivity(new Intent(MainActivity.this,Activity1.class));
+                }
+                else if(i == 1)
+                {
+                    startActivity(new Intent(MainActivity.this,Activity2.class));
+                }
+                else if(i == 2)
+                {
+                    startActivity(new Intent(MainActivity.this,Activity3.class));
+                }
+            }
+        });
+    }
+}
+
+---- Assignment CRUD Demo-------------------------------------------------------------------------------------------------------------------------------------------->
+--MAin XML---
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Name" />
+    <EditText
+        android:id="@+id/txtDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Department Name"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/txtSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Salary"
+        android:inputType="number"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Submit"
+            android:textSize="20sp" />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Submit"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"/>
+
+
+        <Button
+            android:id="@+id/btn_display"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="Display"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+--for displaying data ----
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Singledata">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtDept"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txtSalary"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textSize="20dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/edit_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:background="#2196F3"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <ImageView
+            android:id="@+id/delete_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="0dp"
+            android:background="#F44336"
+            android:src="@android:drawable/ic_menu_delete" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+for display data on the basis of search--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Displaydata">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Data"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/searchData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="Enter Any Text"
+        android:inputType="text"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
+
+public class Displaydata extends AppCompatActivity {
+    DBHelper dBmain;
+    SQLiteDatabase sqLiteDatabase;
+    ListView listView;
+    Button search;
+    EditText nm;
+    String []name;
+    String []deptname;
+    String []salary;
+    int []id;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_displaydata);
+        search = findViewById(R.id.search);
+        nm = findViewById(R.id.searchData);
+        dBmain = new DBHelper(Displaydata.this);
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String n = nm.getText().toString();
+                sqLiteDatabase = getApplicationContext().openOrCreateDatabase("EmployeeDB", Context.MODE_PRIVATE,null);
+                Cursor cursor = sqLiteDatabase.rawQuery("select * from Employee where empname='"+n+"'",null);
+                if(cursor.getCount()==0)
+                {
+                    Toast.makeText(Displaydata.this,"No Record Found",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                StringBuffer stringBuffer = new StringBuffer();
+                while(cursor.moveToNext())
+                {
+                    stringBuffer.append("Employee Id : \t"+cursor.getString(0)+"\n");
+                    stringBuffer.append("Employee Name : \t"+cursor.getString(1)+"\n");
+                    stringBuffer.append("Dept Name : \t"+cursor.getString(2)+"\n");
+                    stringBuffer.append("Salary : \t"+cursor.getString(3)+"\n");
+                }
+                Toast.makeText(Displaydata.this,"Result \n"+stringBuffer.toString(),Toast.LENGTH_SHORT).show();
+            }
+        });
+//create method
+        findid();
+        dis();
+    }
+    private void dis() {
+        sqLiteDatabase = dBmain.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from Employee",null);
+        if(cursor.getCount()>0){
+            id = new int[cursor.getCount()];
+            name = new String[cursor.getCount()];
+            deptname = new String[cursor.getCount()];
+            salary = new String[cursor.getCount()];
+            int i = 0;
+            while(cursor.moveToNext()){
+                id[i] = cursor.getInt(0);
+                name[i] = cursor.getString(1);
+                deptname[i] = cursor.getString(2);
+                salary[i] = cursor.getString(3);
+                i++;
+            }
+            Custom adapter = new Custom();
+            listView.setAdapter(adapter);
+        }else{
+            startActivity(new Intent(Displaydata.this, MainActivity.class));
+        }
+    }
+    private void findid() {
+        listView = findViewById(R.id.listView);
+    }
+    private class Custom extends BaseAdapter {
+        @Override
+        public int getCount() {
+            return name.length;
+        }
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            TextView textView,textView1,textView2;
+            ImageView edit,delete;
+            Button search;
+            view = LayoutInflater.from(Displaydata.this).inflate(R.layout.activity_singledata, viewGroup,false);
+            textView = view.findViewById(R.id.txt_name);
+            textView1 = view.findViewById(R.id.txtDept);
+            textView2 = view.findViewById(R.id.txtSalary);
+            edit = view.findViewById(R.id.edit_data);
+            delete = view.findViewById(R.id.delete_data);
+
+            textView.setText(name[i]);
+            textView1.setText(deptname[i]);
+            textView2.setText(salary[i]);
+            edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("id",id[i]);
+                    bundle.putString("empname",name[i]);
+                    bundle.putString("deptname",deptname[i]);
+                    bundle.putString("salary",salary[i]);
+                    Intent intent = new Intent(Displaydata.this, MainActivity.class);
+                    intent.putExtra("userdata",bundle);
+                    startActivity(intent);
+                }
+            });
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    sqLiteDatabase = dBmain.getReadableDatabase();
+                    long resid =
+                            sqLiteDatabase.delete("Employee","id="+id[i],null);
+                    if(resid != -1){
+                        Toast.makeText(Displaydata.this,"Record Deleted",Toast.LENGTH_SHORT).show();
+                        dis();
+                    }else{
+                        Toast.makeText(Displaydata.this,"Record not Deleted",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+
+
+            return view;
+        }
+
+    }
+}
+
+--DB Helper---
+public class DBHelper extends SQLiteOpenHelper {
+
+    public DBHelper(@Nullable Context context) {
+        super(context, "EmployeeDB", null, 1);
+    }
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        String sql = "create table Employee(id integer primary key, empname text, designation text, email text, phonemumber integer)";
+        db.execSQL(sql);
+    }
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+        String sql = "drop table if exists Employee";
+        db.execSQL(sql);
+        onCreate(db);
+    }
+}
+
+
+-----checkbox example----------------------------------------------------------------------------------------------------------------------------------------->
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="137dp"
+        android:layout_height="58dp"
+        android:text="pencil"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="138dp"
+        android:layout_height="49dp"
+        android:text="Sharpner"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <CheckBox android:id="@+id/checkBox3"
+        android:layout_width="140dp"
+        android:layout_height="49dp"
+        android:text="Scale"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.398" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="205dp"
+        android:layout_height="67dp"
+        android:text="SUBMIT"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.531" />
+
+    <TextView
+        android:id="@+id/ed1"
+        android:layout_width="158dp"
+        android:layout_height="140dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742" />
+
+    <TextView android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Stationery"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Your Orders Here"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+java----
+
+public class MainActivity extends AppCompatActivity {
+    CheckBox pencil,Sharpner,Scale;
+    Button buttonOrder;
+    TextView ed1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState); setContentView(R.layout.activity_main);
+        addListenerOnButtonClick();
+    }
+    public void addListenerOnButtonClick() {
+        pencil = (CheckBox) findViewById(R.id.checkBox);
+        Sharpner = (CheckBox) findViewById(R.id.checkBox2);
+        Scale = (CheckBox) findViewById(R.id.checkBox3);
+        buttonOrder = (Button) findViewById(R.id.button);
+        ed1=findViewById(R.id.ed1);
+
+        buttonOrder.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                int totalamount = 0;
+                StringBuilder result = new StringBuilder();
+                result.append("Selected Items:");
+                if (pencil.isChecked())
+                {
+                    result.append("\npencil 20Rs");
+                    totalamount += 20; }
+
+                if (Sharpner.isChecked())
+                    {
+                        result.append("\nSharpner 35Rs");
+                        totalamount += 35; }
+                if (Scale.isChecked())
+                        {
+                            result.append("\nScale 20Rs"); totalamount += 20; }
+                result.append("\nTotal Amount: " + totalamount +"Rs");
+                ed1.setText(result.toString());
+            }
+        });
+    }
+}
+
+----Login Form------------------------------------------------------------------------------------------------------------------------------
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+   xmlns:tools = "http://schemas.android.com/tools" android:layout_width="match_parent"
+   android:layout_height = "match_parent" android:paddingLeft= "@dimen/activity_horizontal_margin"
+   android:paddingRight = "@dimen/activity_horizontal_margin"
+   android:paddingTop = "@dimen/activity_vertical_margin"
+   android:paddingBottom = "@dimen/activity_vertical_margin" tools:context = ".MainActivity">
+   
+   <TextView android:text = "Login" android:layout_width="wrap_content"
+      android:layout_height = "wrap_content"
+      android:id = "@+id/textview"
+      android:textSize = "35dp"
+      android:layout_alignParentTop = "true"
+      android:layout_centerHorizontal = "true" />
+      
+   
+   <TextView
+      android:layout_width = "wrap_content"
+      android:layout_height = "wrap_content"
+      android:text = "Tutorials point"
+      android:id = "@+id/textView"
+      android:layout_below = "@+id/textview"
+      android:layout_centerHorizontal = "true"
+      android:textColor = "#ff7aff24"
+      android:textSize = "35dp" />
+
+<EditText
+      android:layout_width = "wrap_content"
+      android:layout_height = "wrap_content"
+      android:id = "@+id/editText"
+      android:hint = "Enter Name"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColorHint = "#ffff25e6"
+      android:layout_marginTop = "46dp"
+      android:layout_below = "@+id/imageView"
+      android:layout_alignParentLeft = "true"
+      android:layout_alignParentStart = "true"
+      android:layout_alignParentRight = "true"
+      android:layout_alignParentEnd = "true" />
+      <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/imageView"
+      android:src="@drawable/abc"
+      android:layout_below="@+id/textView"
+      android:layout_centerHorizontal="true" />
+<EditText
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="textPassword"
+      android:ems="10"
+      android:id="@+id/editText2"
+      android:layout_below="@+id/editText"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignRight="@+id/editText"
+      android:layout_alignEnd="@+id/editText"
+      android:textColorHint="#ffff299f"
+      android:hint="Password" />
+      <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="New Text"
+      android:id="@+id/textView3"
+      android:layout_alignTop="@+id/textView2"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:layout_alignBottom="@+id/textView2"
+      android:layout_toEndOf="@+id/textview"
+      android:textSize="25dp"
+      android:layout_toRightOf="@+id/textview" />
+      <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="login"
+      android:id="@+id/button"
+      android:layout_alignParentBottom="true"
+      android:layout_toLeftOf="@+id/textview"
+      android:layout_toStartOf="@+id/textview" />
+      
+   <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Cancel"
+      android:id="@+id/button2"
+      android:layout_alignParentBottom="true"
+      android:layout_toRightOf="@+id/textview"
+      android:layout_toEndOf="@+id/textview" />
+---main java----
+public class MainActivity extends Activity  {
+   Button b1,b2;
+   EditText ed1,ed2;
+
+   TextView tx1;
+   int counter = 3;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
+
+      b1 = (Button)findViewById(R.id.button);
+      ed1 = (EditText)findViewById(R.id.editText);
+      ed2 = (EditText)findViewById(R.id.editText2);
+
+      b2 = (Button)findViewById(R.id.button2);
+      tx1 = (TextView)findViewById(R.id.textView3);
+      tx1.setVisibility(View.GONE);
+java 
+ b1.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            if(ed1.getText().toString().equals("admin") &&
+               ed2.getText().toString().equals("admin")) {
+                  Toast.makeText(getApplicationContext(),
+                     "Redirecting...",Toast.LENGTH_SHORT).show();
+               }else{
+                  Toast.makeText(getApplicationContext(), "Wrong 
+                     Credentials",Toast.LENGTH_SHORT).show();
+
+                  tx1.setVisibility(View.VISIBLE);
+                  tx1.setBackgroundColor(Color.RED);
+                  counter--;
+                  tx1.setText(Integer.toString(counter));
+if (counter == 0) {
+                     b1.setEnabled(false);
+                  }
+               }
+         }
+      });
+
+      b2.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            finish();
+         }
+      });
+   }
+}
